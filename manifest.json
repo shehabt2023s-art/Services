@@ -13,7 +13,7 @@
   "description": "تطبيق مستقبل الشرقية — أحدث الأخبار والخدمات من محافظة الشرقية في مكان واحد.",
   "categories": ["public services"],
   "launch_handler": {
-    "client_mode": "window", 
+    "client_mode": "window",
     "navigate_existing_client": "never"
   },
   "protocol_handlers": [
@@ -53,16 +53,22 @@
   ],
   "screenshots": [
     {
-      "src": "screenshot1.png",
+      "src": "screenshot1.jpg",
       "sizes": "720x1280",
-      "type": "image/png",
+      "type": "image/jpeg",
       "label": "الصفحة الرئيسية"
     },
     {
-      "src": "screenshot2.png",
+      "src": "screenshot2.jpg",
       "sizes": "720x1280",
-      "type": "image/png",
+      "type": "image/jpeg",
       "label": "الخدمات العامة"
+    },
+    {
+      "src": "screenshot3.jpg",
+      "sizes": "720x1280",
+      "type": "image/jpeg",
+      "label": "واجهة المستخدم"
     }
   ]
 }
