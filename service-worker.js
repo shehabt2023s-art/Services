@@ -5,15 +5,18 @@ const CACHE_NAME = 'sharqia-app-v1';
 
 // 🧩 الملفات اللي تتخزن مؤقتًا (كاش)
 const urlsToCache = [
-  './',
-  './index.html',
-  './manifest.json',
-  './offline.html',
-  './favicon-32x32.png',
-  './favicon-16x16.png',
-  './apple-touch-icon.png',
-  './android-chrome-192x192.png',
-  './android-chrome-512x512.png'
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/offline.html',
+  '/favicon-32x32.png',
+  '/favicon-16x16.png',
+  '/apple-touch-icon.png',
+  '/android-chrome-192x192.png',
+  '/android-chrome-512x512.png',
+  '/screenshot1.png',
+  '/screenshot2.png',
+  '/screenshot3.png'
 ];
 
 // 1️⃣ التثبيت (Install)
@@ -80,7 +83,7 @@ self.addEventListener('fetch', event => {
             }
             return networkResponse;
           })
-          .catch(() => caches.match('./offline.html')); // ✅ المسار النسبي
+          .catch(() => caches.match('/offline.html')); // ✅ تم تعديل المسار للجذر
       })
   );
 });
