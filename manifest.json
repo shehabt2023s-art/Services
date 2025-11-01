@@ -54,19 +54,19 @@
   "screenshots": [
     {
       "src": "screenshot1.jpg",
-      "sizes": "720x1280",
+      "sizes": "1080x2408",
       "type": "image/jpeg",
       "label": "الصفحة الرئيسية"
     },
     {
       "src": "screenshot2.jpg",
-      "sizes": "720x1280",
+      "sizes": "1080x2408",
       "type": "image/jpeg",
       "label": "الخدمات العامة"
     },
     {
       "src": "screenshot3.jpg",
-      "sizes": "720x1280",
+      "sizes": "1080x2408",
       "type": "image/jpeg",
       "label": "واجهة المستخدم"
     }
