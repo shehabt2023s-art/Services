@@ -1,7 +1,7 @@
 {
-  "id": "app.shehabt.mostaqbal",
   "name": "مستقبل الشرقية",
   "short_name": "الشرقية",
+  "id": "com.sharqia.futureapp",
   "lang": "ar",
   "dir": "rtl",
   "start_url": "/index.html",
@@ -11,6 +11,17 @@
   "background_color": "#ffffff",
   "theme_color": "#1e40af",
   "description": "تطبيق مستقبل الشرقية — أحدث الأخبار والخدمات من محافظة الشرقية في مكان واحد.",
+  "categories": ["public services"],
+  "launch_handler": {
+    "client_mode": "window", 
+    "navigate_existing_client": "never"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "mstqbl",
+      "url": "/?link=%s"
+    }
+  ],
   "icons": [
     {
       "src": "android-chrome-192x192.png",
@@ -44,12 +55,14 @@
     {
       "src": "screenshot1.png",
       "sizes": "720x1280",
-      "type": "image/png"
+      "type": "image/png",
+      "label": "الصفحة الرئيسية"
     },
     {
       "src": "screenshot2.png",
       "sizes": "720x1280",
-      "type": "image/png"
+      "type": "image/png",
+      "label": "الخدمات العامة"
     }
   ]
 }
