@@ -1,6 +1,6 @@
 {
-  "name": "مستقبل الشرقية",
-  "short_name": "الشرقية",
+  "name": "Sharqia",
+  "short_name": "Sharqia",
   "id": "com.sharqia.futureapp",
   "lang": "ar",
   "dir": "rtl",
@@ -10,7 +10,7 @@
   "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#1e40af",
-  "description": "تطبيق مستقبل الشرقية — أحدث الأخبار والخدمات من محافظة الشرقية في مكان واحد.",
+  "description": "تطبيق Sharqia — أحدث الأخبار والخدمات من محافظة الشرقية في مكان واحد.",
   "categories": ["public services"],
   "launch_handler": {
     "client_mode": "window",
