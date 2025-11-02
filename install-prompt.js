@@ -41,7 +41,7 @@ window.addEventListener("beforeinstallprompt", (e) => {
       transform: translateX(-50%);
       background: #1e40af;
       color: white;
-      padding: 10px 14px;
+      padding: 8px 10px;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
@@ -50,9 +50,9 @@ window.addEventListener("beforeinstallprompt", (e) => {
       box-shadow: 0 4px 8px rgba(0,0,0,0.25);
       z-index: 9999;
       font-family: 'Cairo', sans-serif;
-      font-size: 14px;
-      width: 90%;
-      max-width: 320px;
+      font-size: 12px;
+      width: 60%;
+      max-width: 280px;
       animation: slideDown 0.5s ease;
     ">
       <div style="display:flex;align-items:center;gap:10px;">
