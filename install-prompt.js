@@ -58,7 +58,7 @@ window.addEventListener("beforeinstallprompt", (e) => {
       <div style="display:flex;align-items:center;gap:10px;">
         <img src="android-chrome-192x192.png" alt="App Icon" 
              style="width:30px; height:30px; border-radius:6px;">
-        <span>هل تريد تثبيت تطبيق <b>مستقبل الشرقية</b>؟</span>
+        <span>هل تريد تثبيت تطبيق <b>Sharqia</b>؟</span>
       </div>
       <div style="display:flex;gap:10px;">
         <button id="installBtn" style="
