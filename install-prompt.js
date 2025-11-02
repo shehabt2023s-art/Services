@@ -1,60 +1,79 @@
 let deferredPrompt;
-const showPromptEveryTime = true; // المستخدم يقدر يرفض وبيظهر تاني المره الجايه
 
 window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
   deferredPrompt = e;
 
-  // إنشاء الزر أو الإشعار
-  const installDiv = document.createElement("div");
-  installDiv.id = "installPrompt";
-  installDiv.innerHTML = `
+  // لو الإشعار موجود فعلاً، ميتكررش
+  if (document.getElementById("installBanner")) return;
+
+  // إنشاء الإشعار في أعلى الصفحة
+  const banner = document.createElement("div");
+  banner.id = "installBanner";
+  banner.innerHTML = `
     <div style="
       position: fixed;
-      bottom: 15px;
-      left: 10px;
-      right: 10px;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
       background: #1e40af;
       color: white;
-      padding: 12px;
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-      font-size: 16px;
-      z-index: 9999;">
-      📱 هل ترغب في تثبيت تطبيق <b>مستقبل الشرقية</b>؟
-      <br>
+      padding: 10px 14px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 9999;
+      font-family: 'Cairo', sans-serif;
+      font-size: 14px;
+      animation: slideDown 0.5s ease;
+    ">
+      <img src="android-chrome-192x192.png" alt="App Icon" style="width:28px; height:28px; border-radius:6px;">
+      <span>تثبيت تطبيق <b>مستقبل الشرقية</b>؟</span>
       <button id="installBtn" style="
-        margin-top: 10px;
         background: white;
         color: #1e40af;
         border: none;
-        border-radius: 8px;
-        padding: 8px 14px;
-        font-weight: bold;">تثبيت</button>
-      <button id="closeInstall" style="
-        margin-top: 10px;
+        border-radius: 6px;
+        padding: 4px 10px;
+        font-weight: bold;
+        font-size: 12px;
+      ">تثبيت</button>
+      <button id="closeBtn" style="
         background: transparent;
         color: white;
         border: 1px solid white;
-        border-radius: 8px;
-        padding: 8px 14px;">لاحقًا</button>
+        border-radius: 6px;
+        padding: 4px 10px;
+        font-size: 12px;
+      ">×</button>
     </div>
   `;
-  document.body.appendChild(installDiv);
+
+  document.body.appendChild(banner);
 
   const installBtn = document.getElementById("installBtn");
-  const closeBtn = document.getElementById("closeInstall");
+  const closeBtn = document.getElementById("closeBtn");
 
   installBtn.addEventListener("click", async () => {
-    installDiv.remove();
+    banner.remove();
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
     deferredPrompt = null;
   });
 
   closeBtn.addEventListener("click", () => {
-    installDiv.remove();
-    if (!showPromptEveryTime) deferredPrompt = null;
+    banner.remove();
   });
 });
+
+// حركة بسيطة عند الظهور
+const style = document.createElement("style");
+style.innerHTML = `
+@keyframes slideDown {
+  from { transform: translate(-50%, -100%); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}`;
+document.head.appendChild(style);
