@@ -3,6 +3,6 @@
       "target": {
         "namespace": "android_app",
         "package_name": "app.netlify.sharqia.twa",
-        "sha256_cert_fingerprints": ["80:4E:14:E3:9D:D6:93:AD:AB:B7:33:BC:42:0B:5C:69:08:2B:12:12:CC:CF:C9:F1:3D:D4:90:BB:72:FB:3F:49"]
+        "sha256_cert_fingerprints": ["2C:D1:E9:65:62:4A:1A:AA:95:66:A8:97:2C:20:B1:79:7E:4C:7A:46:A4:76:D8:82:DB:B7:63:37:19:F2:65:2E"]
       }
     }]
